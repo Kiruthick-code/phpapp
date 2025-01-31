@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel and Tourism</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-image: url('image.jpg'); 
+            background-size: cover; 
+            background-position: center center; 
+            background-attachment: fixed; 
+            height: 100vh; 
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 121, 107, 0.8);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c5e1a5;
+        }
+
+        main {
+            width: 80%;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-top: 80px;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 32%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #00796b;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* Review Section */
+        #reviews {
+            margin-top: 40px;
+            width: 100%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #reviews h2 {
+            text-align: center;
+            color: #00796b;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #reviews form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #reviews form label {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        #reviews form input, #reviews form select, #reviews form textarea {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        #reviews form input[type="submit"] {
+            background-color: #00796b;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        #reviews form input[type="submit"]:hover {
+            background-color: #004d40;
+        }
+
+        /* Display reviews */
+        .review-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .review-item h3 {
+            font-size: 1.4em;
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+
+        .review-item p {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .review-item .rating {
+            font-size: 1.2em;
+            color: #ffb300;
+        }
+
+        /* Registration Form */
+        #register {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        form label {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        form input[type="submit"] {
+            background-color: #00796b;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #004d40;
+        }
+
+        /* Media Query for Responsive Design */
+        @media screen and (max-width: 768px) {
+            main {
+                width: 90%;
+            }
+
+            section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin-bottom: 10px;
+            }
+
+            form {
+                width: 90%;
+            }
+
+            #register {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Explore Incredible Destinations</h1>
+        <p>Your guide to the best travel destinations in India</p>
+        <nav>
+            <ul>
+                <li><a href="bangalore.html">Bangalore</a></li>
+                <li><a href="ooty.html">Ooty</a></li>
+                <li><a href="kodaikanal.html">Kodaikanal</a></li>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#register">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="bangalore">
+            <h2>Bangalore</h2>
+            <p>Bangalore, also known as the "Garden City," is a vibrant city with a blend of nature and technology. A must-visit destination for all travelers.</p>
+            <img src="Bangalore.jpg" alt="Bangalore">
+        </section>
+        
+        <section id="kodaikanal">
+            <h2>Kodaikanal</h2>
+            <p>Known as the "Princess of Hill Stations," Kodaikanal offers beautiful landscapes, serene lakes, and lush greenery, making it a perfect retreat.</p>
+            <img src="Kodaikanal.jpg" alt="Kodaikanal">
+        </section>
+
+        <section id="ooty">
+            <h2>Ooty</h2>
+            <p>Ooty, famously known as the "Queen of Hill Stations," is an idyllic destination surrounded by beautiful hills, lakes, and lush gardens.</p>
+            <img src="ooty.jpg" alt="Ooty">
+        </section>
+
+        <section id="about-us">
+            <h2>About Us</h2>
+            <p>We are a passionate team of travel enthusiasts dedicated to providing you with the best travel experiences and helping you explore the most beautiful destinations in India. Whether you're looking for a peaceful hill station retreat or a vibrant city experience, we have it all covered for you. Our goal is to help you plan your perfect getaway with expert recommendations and personalized travel tips.</p>
+        </section>
+
+        <!-- Register Section -->
+        <section id="register">
+            <h2>Register for More Information</h2>
+            <form action="register.php" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="destination">Preferred Destination:</label>
+                <select id="destination" name="destination" required>
+                    <option value="bangalore">Bangalore</option>
+                    <option value="kodaikanal">Kodaikanal</option>
+                    <option value="ooty">Ooty</option>
+                </select>
+
+                <input type="submit" value="Register Now">
+            </form>
+        </section>
+
+        <!-- Review Section -->
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <form action="submit_review.php" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="rating">Rating (1-5):</label>
+                <select id="rating" name="rating" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+
+                <label for="review">Your Review:</label>
+                <textarea id="review" name="review" rows="4" required></textarea>
+
+                <input type="submit" value="Submit Review">
+            </form>
+
+            <!-- Display reviews (static example) -->
+            <div class="review-item">
+                <h3>John Doe</h3>
+                <div class="rating">Rating: 5/5</div>
+                <p>This place is amazing! Loved the gardens and the vibrant atmosphere of the city. Definitely recommend visiting Bangalore!</p>
+            </div>
+
+            <div class="review-item">
+                <h3>Jane Smith</h3>
+                <div class="rating">Rating: 4/5</div>
+                <p>Beautiful destination, but it gets a bit crowded at times. Still a great place to visit for nature lovers!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel and Tourism | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<html>
+<head>
+<title>Travel and Tourism</title>
+<style>
+	body{
+		font-family:Arial,sans-serif;
+		margin:0;
+		padding:0;
+	}
+	header{
+		background-color:#333;
+		color:#fff;
+		padding:20px;
+		text-align:center;
+	}
+	nav ul{
+		life-style:none;
+		margin:0;
+		padding:0;
+		display:flex;
+		justify-content:space-between;
+	}
+	nav li{
+		margin-right:20px;
+	}
+	nav a{
+		color:#fff;
+		text-decoration:none;
+	}
+	main{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		padding:20px;
+	}
+	section{
+		background-color:#f7f7f7;
+		padding:20px;
+		box-shadow:0 0 10px rgba(0,0,0,0.1);
+	}
+	h1{
+		margin-top:0;
+	}
+	img{
+		width:100%;
+		height:px;
+		object-fit:cover;
+		border-radius:10px;
+	}
+	footer{
+		background-color:#333;
+		color:#fff;
+		padding:10px;
+		text-align:center;
+		clear:both;
+	}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<center>
+<!--Header section-->
+<header>
+<nav>
+<ul>
+<li>
+<a href="#bangalore">Bangalore</a></li>
+<li><a href="#ooty">ooty</a></li>
+<li><a href="#kodaikanal">kodaikanal</a></li>
+<li><a href="#register">Register</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section id="bangalore">
+<h1>Bangalore</h1>
+<p>Bangalore, the garden city of India, is a must-visit destination for any traveler.</p>
+<img src="U:\Bangalore.jpg" alt="Bangalore">
+</section>
+<section id="Kodaikanal">
+<h1>kodaikanal</h1>
+<p>Kodaikanal the princess of hill stations,is a scienic town in tamil nadu.</p>
+<img src="‪‪U:\Kodaikanal.jpg" alt="Kodaikanal">
+</section>
+<section id="ooty">
+<h1>ooty</h1>
+<p>ooty,the queen of hill stations,is a popular tourist destination in tamil nadu.</p>
+<img src="U:\ooty.jpg" alt="ooty">
+</section>
+<section id="register">
+<h1>Register</h1>
+<form action="register.php" method="post"
+<label for="name">Name:</label>
+<input type="text" id="name" name="name"><br><br>
+<label for="email">Email:</label>
+<input type="text" id="email" name="email"><br><br>
+<label for="phone">Phone:</label>
+<input type="tel" id="phone" name="phone"><br><br>
+<label for ="destination">Destination:</label>
+<option value="bangalore">Bangalore</option>
+<option value="kodaikanal">Kodaikanal</option>
+<option value="ooty">Ooty</option>
+</select><br><br>
+<input type="submit" value="Register">
+</form>
+</section>
+</main>
+<!--footer section-->
+<footer>
+<p>&copy;2024 travel and tourism</p>
+</center>
+</footer>
+</body>
+</html>
