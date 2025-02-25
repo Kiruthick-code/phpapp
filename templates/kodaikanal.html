@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kodaikanal - Travel and Tourism</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-image: url('image.jpg'); 
+            background-size: cover; 
+            background-position: center center; 
+            background-attachment: fixed; 
+            height: 100vh; 
+        }
+
+        header {
+            background-color: rgba(0, 121, 107, 0.8); /* Semi-transparent header */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c5e1a5;
+        }
+
+        main {
+            width: 80%;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 32%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #00796b;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        /* Media Query for Responsive Design */
+        @media screen and (max-width: 768px) {
+            main {
+                width: 90%;
+            }
+
+            section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kodaikanal - Places to Visit</h1>
+        <nav>
+            <ul>
+                <li><a href="tavelnew.html">Home</a></li>
+                <li><a href="#coakers-walk">Coaker's Walk</a></li>
+                <li><a href="#kodaikanal-lake">Kodaikanal Lake</a></li>
+                <li><a href="#bryant-park">Bryant Park</a></li>
+                <li><a href="#pillar-rocks">Pillar Rocks</a></li>
+                <li><a href="#silver-cascade">Silver Cascade Waterfall</a></li>
+				<li><a href="plank.html">plan</a></l
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="coakers-walk">
+            <h2>Coaker's Walk</h2>
+            <p>Coaker's Walk is a scenic pedestrian path offering spectacular views of the valley. It is perfect for a peaceful walk amidst nature.</p>
+            <img src="Coa.jpg" alt="Coaker's Walk">
+        </section>
+
+        <section id="kodaikanal-lake">
+            <h2>Kodaikanal Lake</h2>
+            <p>The man-made Kodaikanal Lake is an iconic spot for boating and relaxation. Surrounded by lush greenery, it's an ideal spot for nature lovers.</p>
+            <img src="Lakeko.jpg" alt="Kodaikanal Lake">
+        </section>
+
+        <section id="bryant-park">
+            <h2>Bryant Park</h2>
+            <p>One of the most beautiful parks in Kodaikanal, Bryant Park is known for its variety of flora, including exotic species of plants, flowers, and trees.</p>
+            <img src="Bryant.jpg" alt="Bryant Park">
+        </section>
+
+        <section id="pillar-rocks">
+            <h2>Pillar Rocks</h2>
+            <p>Pillar Rocks is a breathtaking spot where three giant rock pillars stand tall against the backdrop of the beautiful valley. It's a must-see natural wonder in Kodaikanal.</p>
+            <img src="Pillar.jpg" alt="Pillar Rocks">
+        </section>
+
+        <section id="silver-cascade">
+            <h2>Silver Cascade Waterfall</h2>
+            <p>The Silver Cascade Waterfall is a beautiful cascade located on the Ghat road. The sight of the water gushing down the rocks makes it an excellent spot for photography and relaxation.</p>
+            <img src="Silver.jpg" alt="Silver Cascade Waterfall">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel and Tourism | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

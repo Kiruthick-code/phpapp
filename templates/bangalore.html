@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bangalore - Travel and Tourism</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background-image: url('image.jpg'); 
+            background-size: cover; 
+            background-position: center center; 
+            background-attachment: fixed; 
+            height: 100vh; 
+        }
+
+        header {
+            background-color: rgba(0, 121, 107, 0.8); /* Semi-transparent header */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            margin-top: 0;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 10px;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #c5e1a5;
+        }
+
+        main {
+            width: 80%;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 32%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #00796b;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 8px;
+            margin-top: 15px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        /* Media Query for Responsive Design */
+        @media screen and (max-width: 768px) {
+            main {
+                width: 90%;
+            }
+
+            section {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Bangalore - Places to Visit</h1>
+        <nav>
+            <ul>
+                <li><a href="tavelnew.html">Home</a></li>
+                <li><a href="#lalbagh">Lalbagh Botanical Garden</a></li>
+                <li><a href="#bangalore-palace">Bangalore Palace</a></li>
+                <li><a href="#vidhana-soudha">Vidhana Soudha</a></li>
+                <li><a href="#cubbon-park">Cubbon Park</a></li>
+                <li><a href="#iskcon-temple">ISKCON Temple</a></li>
+                <li><a href="#bannerghatta-park">Bannerghatta National Park</a></li>
+                <li><a href="#commercial-street">Commercial Street</a></li>
+				<li><a href="planb.html">plan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="lalbagh">
+            <h2>Lalbagh Botanical Garden</h2>
+            <p>Lalbagh is a 240-acre botanical garden known for its rich collection of tropical plants, a glasshouse modeled after London's Crystal Palace, and breathtaking landscapes.</p>
+            <img src="lal.jpg" alt="Lalbagh Botanical Garden">
+        </section>
+
+        <section id="bangalore-palace">
+            <h2>Bangalore Palace</h2>
+            <p>Bangalore Palace, with its Tudor-style architecture, is a magnificent structure that offers a glimpse into the regal history of the city.</p>
+            <img src="bangalore-palace.jpg" alt="Bangalore Palace">
+        </section>
+
+        <section id="vidhana-soudha">
+            <h2>Vidhana Soudha</h2>
+            <p>This iconic government building is a beautiful example of Dravidian architecture and houses the Karnataka State Legislature. It is one of Bangalore's most recognized landmarks.</p>
+            <img src="vi.jpg" alt="Vidhana Soudha">
+        </section>
+
+        <section id="cubbon-park">
+            <h2>Cubbon Park</h2>
+            <p>Located in the heart of the city, Cubbon Park is a lush green oasis offering a peaceful retreat amidst the urban hustle, perfect for walking, jogging, or simply relaxing.</p>
+            <img src="cubbon.jpg" alt="Cubbon Park">
+        </section>
+
+        <section id="iskcon-temple">
+            <h2>ISKCON Temple</h2>
+            <p>The ISKCON temple in Bangalore is one of the largest and most beautiful temples in India, offering a serene environment for spiritual seekers and visitors alike.</p>
+            <img src="temple.jpg" alt="ISKCON Temple">
+        </section>
+
+        <section id="bannerghatta-park">
+            <h2>Bannerghatta National Park</h2>
+            <p>This wildlife park, located on the outskirts of Bangalore, offers safaris, a zoo, and a butterfly park, making it a popular destination for nature lovers and families.</p>
+            <img src="park.jpg" alt="Bannerghatta National Park">
+        </section>
+
+        <section id="commercial-street">
+            <h2>Commercial Street</h2>
+            <p>For shopaholics, Commercial Street offers a variety of goods, from trendy clothes and accessories to souvenirs and spices. It's a bustling area full of life and energy.</p>
+            <img src="street.jpg" alt="Commercial Street">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bangalore Travel Guide | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

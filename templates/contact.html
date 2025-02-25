@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Journey Travel & Tours</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        main {
+            width: 80%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #00796b;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        input[type="submit"] {
+            background-color: #00796b;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004d40;
+        }
+
+        .step {
+            margin-bottom: 30px;
+        }
+
+        .captcha {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer {
+            background-color: #00796b;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <main>
+        <form action="contactus.php" method="POST">
+
+            <!-- Step 1 -->
+            <section class="step">
+                <h2>Step 1: How May We Help You?</h2>
+                <label for="inquiry-type">Select Inquiry Type:</label>
+                <select id="inquiry-type" name="inquiry_type" required>
+                    <option value="business">Business Inquiry</option>
+                    <option value="personal">Personal Inquiry</option>
+                    <option value="general">General Inquiry/Request</option>
+                </select>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter Destination">
+
+                <label for="dates">Dates (if known):</label>
+                <input type="date" id="start-date" name="start_date">
+                <input type="date" id="end-date" name="end_date">
+            </section>
+
+            <!-- Step 2 -->
+            <section class="step">
+                <h2>Step 2: Your Name</h2>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first_name" required>
+
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last_name" required>
+
+                <label for="company">Company (optional):</label>
+                <input type="text" id="company" name="company">
+            </section>
+
+            <!-- Step 3 -->
+            <section class="step">
+                <h2>Step 3: Contact Info</h2>
+                <label for="phone">Phone:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <label for="cell-phone">Cell Phone:</label>
+                <input type="text" id="cell-phone" name="cell_phone">
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Street/PO Box:</label>
+                <input type="text" id="address" name="address">
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city">
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state">
+
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" name="zip">
+                
+                <label for="contact-method">Preferred Contact Method:</label>
+                <select id="contact-method" name="contact_method" required>
+                    <option value="">—Please choose an option—</option>
+                    <option value="phone">Phone</option>
+                    <option value="email">Email</option>
+                </select>
+            </section>
+
+            <!-- Step 4 -->
+            <section class="step">
+                <h2>Step 4: Comments</h2>
+                <label for="comments">Please provide additional details:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+            </section>
+
+            <!-- Step 5 -->
+            <section class="step">
+                <h2>Step 5: Finalize</h2>
+                <div class="captcha">
+                    <label for="captcha">Enter Captcha:</label>
+                    <input type="text" id="captcha" name="captcha" placeholder="Enter captcha here" required>
+                    <!-- You can implement an actual CAPTCHA here -->
+                </div>
+                <input type="submit" value="Submit">
+            </section>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Journey Travel & Tours | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
