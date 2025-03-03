@@ -11,40 +11,16 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # SQLite database setup
 def get_db_connection():
-    conn = sqlite3.connect('reviews.db')
+    conn = sqlite3.connect('madesh.db')
     conn.row_factory = sqlite3.Row  # Allows column access by name
     return conn
-	
+
 @app.route('/')
-def home():
-    return render_template('kevin.html')
+def index():
+    return render_template('r.html')  # Render the HTML form
 
-@app.route('/bangalore')
-def bangalore():
-    return render_template('bangalore.html')
-
-@app.route('/ooty')
-def ooty():
-    return render_template('ooty.html')
-
-@app.route('/kodaikanal')
-def kodaikanal():
-    return render_template('kodaikanal.html')
-
-@app.route('/about-us')
-def about_us():
-    return render_template('about-us.html')
-
-@app.route('/rating')
-def rating():
-    # Fetch reviews from the database
-    conn = get_db_connection()
-    reviews = conn.execute('SELECT * FROM reviews').fetchall()
-    conn.close()
-    return render_template('rating.html', reviews=reviews)  # Render your HTML form (r.html)
-
-@app.route('/review', methods=['POST'])
-def review():
+@app.route('/submit_review', methods=['POST'])
+def submit_review():
     # Get data from the form
     name = request.form['name']
     rating = request.form['rating']
@@ -59,12 +35,17 @@ def review():
             image.save(image_path)
             review_image = image.filename
 
-    # Insert review into the database using your table structure
-    conn = get_db_connection()
-    conn.execute('INSERT INTO reviews (name, rating, review, review_image) VALUES (?, ?, ?, ?)',
-                 (name, rating, review, review_image))
-    conn.commit()
-    conn.close()
+    # Insert review into the database
+    try:
+        conn = get_db_connection()
+        conn.execute('INSERT INTO madesh (name, rating, review, review_image) VALUES (?, ?, ?, ?)',
+                     (name, rating, review, review_image))
+        conn.commit()
+        conn.close()
+        print("Review inserted into database successfully!")
+    except Exception as e:
+        print(f"Error inserting review into database: {e}")
+        return f"An error occurred: {e}"
 
     return redirect('/')
 
